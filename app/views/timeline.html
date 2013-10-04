@@ -1,0 +1,116 @@
+<div class="sidemenu" ng-controller="TimelineMenuCtrl">
+  <div class="ui vertical inverted text menu">
+    <a class="active item">
+      <i class="home icon"></i> My Money
+    </a>
+  </div>
+  <div class="ui horizontal inverted divider">
+    <i class="users icon"></i>
+  </div>
+  <div class="ui vertical inverted text menu">
+    <a class="item" ng-repeat="community in communities" ng-click="updateName(community)">
+      <i class="gittip icon"></i>
+      {{ community.name }}
+    </a>
+  </div>
+  <a class="ui fluid red small button" ng-click="createCommunity()">Create Group</a>
+</div>
+
+<div class="main-content">
+
+  <div class="top-money-info ui connected items">
+    <div class="three ui row">
+      <div class="item">
+        <div class="content">
+          <div class="name">
+            <i class="cloud download icon"></i>
+            수입
+          </div>
+          <div class="number">
+            <i class="korean won icon"></i> 1,000,000
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="content">
+          <div class="name">
+            <i class="cloud upload icon"></i>
+            지출
+          </div>
+          <div class="number">
+            <i class="korean won icon"></i> 1,000,000
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="content">
+          <div class="name">
+            <i class="money icon"></i>
+            잔액
+          </div>
+          <div class="number">
+            <i class="korean won icon"></i> 1,000,000
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui positive button">
+    <i class="cloud download icon"></i>
+    수입입력
+  </div>
+  <div class="ui negative button">
+    <i class="cloud upload icon"></i>
+    지출입력
+  </div>
+
+  <form class="timeline-form ui form segment">
+    <p>수입/지출내역을 입력해주세요.</p>
+    <div class="three fields">
+      <div class="field">
+        <label>Type</label>
+        <input ng-model="form.item_type" placeholder="예) 식비/여가비" type="text">
+      </div>
+      <div class="field">
+        <label>Name</label>
+        <input ng-model="form.name" placeholder="예) 떡볶이" type="text">
+      </div>
+      <div class="field">
+        <label>Price</label>
+        <input ng-model="form.price" placeholder="금액입력" type="text">
+      </div>
+    </div>
+    <div class="field">
+      <label>Memo</label>
+      <input ng-model="form.memo" placeholder="메모입력" type="text">
+    </div>
+    <div class="ui blue submit button" ng-click="formSubmit()">Submit</div>
+    <div class="ui submit button" ng-click="formCancel()">Cancel</div>
+  </form>
+
+  <div class="ui piled feed">
+
+    <div class="event" ng-repeat="item in items">
+      <div class="label">
+        <img src="http://semantic-ui.com/images/demo/avatar.jpg">
+      </div>
+      <div class="content">
+        <div class="date">
+          {{ item.updated_at | fromNowText }}
+        </div>
+        <div class="summary">
+          <a>김충섭</a>님이 <b>[{{ item.item_type }}]{{ item.name }}</b>로 <b>{{ item.price | moneyText }}</b>을 지출하였습니다.
+        </div>
+        <div class="extra text" ng-show="item.memo">
+          {{ item.memo }}
+        </div>
+      </div>
+    </div>
+
+    <div class="ui horizontal icon divider">
+      <i class="circular heart icon"></i>
+    </div>
+  </div>
+</div>
+

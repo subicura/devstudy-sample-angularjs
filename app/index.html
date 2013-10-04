@@ -1,0 +1,142 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" type="text/css" class="ui" href="/bower_components/semantic-ui/build/minified/elements/icon.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="/bower_components/semantic-ui/build/minified/elements/button.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="/bower_components/semantic-ui/build/minified/elements/divider.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="/bower_components/semantic-ui/build/minified/elements/header.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="/bower_components/semantic-ui/build/minified/elements/image.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="/bower_components/semantic-ui/build/minified/elements/input.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="/bower_components/semantic-ui/build/minified/elements/label.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="/bower_components/semantic-ui/build/minified/elements/loader.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="/bower_components/semantic-ui/build/minified/elements/progress.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="/bower_components/semantic-ui/build/minified/elements/segment.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="/bower_components/semantic-ui/build/minified/elements/step.min.css">
+
+    <link rel="stylesheet" type="text/css" class="ui" href="/bower_components/semantic-ui/build/minified/collections/breadcrumb.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="/bower_components/semantic-ui/build/minified/collections/form.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="/bower_components/semantic-ui/build/minified/collections/grid.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="/bower_components/semantic-ui/build/minified/collections/menu.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="/bower_components/semantic-ui/build/minified/collections/message.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="/bower_components/semantic-ui/build/minified/collections/table.min.css">
+
+    <link rel="stylesheet" type="text/css" class="ui" href="/bower_components/semantic-ui/build/minified/views/comment.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="/bower_components/semantic-ui/build/minified/views/list.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="/bower_components/semantic-ui/build/minified/views/feed.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="/bower_components/semantic-ui/build/minified/views/item.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="/bower_components/semantic-ui/build/minified/views/statistic.min.css">
+
+    <link rel="stylesheet" type="text/css" class="ui" href="/bower_components/semantic-ui/build/minified/modules/modal.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="/bower_components/semantic-ui/build/minified/modules/accordion.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="/bower_components/semantic-ui/build/minified/modules/dropdown.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="/bower_components/semantic-ui/build/minified/modules/popup.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="/bower_components/semantic-ui/build/minified/modules/reveal.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="/bower_components/semantic-ui/build/minified/modules/rating.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="/bower_components/semantic-ui/build/minified/modules/sidebar.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="/bower_components/semantic-ui/build/minified/modules/shape.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="/bower_components/semantic-ui/build/minified/modules/tab.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="/bower_components/semantic-ui/build/minified/modules/checkbox.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="/bower_components/semantic-ui/build/minified/modules/dimmer.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="/bower_components/semantic-ui/build/minified/modules/transition.min.css">
+
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="/styles/main.css">
+        <!-- endbuild -->
+</head>
+  <body ng-app="moneyApp" ng-controller="MainCtrl">
+    {{ greeting }}
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script src="/bower_components/es5-shim/es5-shim.js"></script>
+      <script src="/bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div class="ui fixed transparent inverted main menu">
+      <div class="container">
+        <a class="launch item" href="/app"><i class="korean won icon"></i> MoneyBook</a>
+        <div ng-class="{active:location.path().indexOf('/app/timeline') > -1 || location.path() == '/app'}" class="item">
+          <i class="list icon layout"></i>
+          <a href="/app"">timeline</a>
+        </div>
+        <div ng-class="{active:location.path().indexOf('/app/report') > -1}" class="item">
+          <i class="grid icon layout"></i>
+          <a href="/app/report">report</a>
+        </div>
+        <div ng-class="{active:location.path().indexOf('/app/calendar') > -1}" class="item">
+          <i class="calendar icon layout"></i>
+          <a href="/app/calendar">calendar</a>
+        </div>
+
+        <div class="right menu">
+          <a class="popup developer icon item" title="Developer Mode">
+            <i class="setting icon"></i>
+          </a>
+          <a class="popup icon github item" title="View project on Github" ng-click="logout()">
+            <i class="sign out icon"></i>
+            logout
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="contents container" ng-view=""></div>
+    <div class="copyright">
+        <span class="ui black label">2013 © Dev-study</span>
+    </div>
+
+    <script src="/bower_components/jquery/jquery.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+
+    <script src="/bower_components/semantic-ui/build/minified/modules/behavior/api.min.js"></script>
+    <script src="/bower_components/semantic-ui/build/minified/modules/behavior/state.min.js"></script>
+    <script src="/bower_components/semantic-ui/build/minified/modules/accordion.min.js"></script>
+    <script src="/bower_components/semantic-ui/build/minified/modules/checkbox.min.js"></script>
+    <script src="/bower_components/semantic-ui/build/minified/modules/dimmer.min.js"></script>
+    <script src="/bower_components/semantic-ui/build/minified/modules/dropdown.min.js"></script>
+    <script src="/bower_components/semantic-ui/build/minified/modules/modal.min.js"></script>
+    <script src="/bower_components/semantic-ui/build/minified/modules/popup.min.js"></script>
+    <script src="/bower_components/semantic-ui/build/minified/modules/rating.min.js"></script>
+    <script src="/bower_components/semantic-ui/build/minified/modules/sidebar.min.js"></script>
+    <script src="/bower_components/semantic-ui/build/minified/modules/tab.min.js"></script>
+    <script src="/bower_components/semantic-ui/build/minified/modules/transition.min.js"></script>
+
+    <script src="/bower_components/moment/min/moment+langs.min.js"></script>
+    
+        <!-- build:js scripts/modules.js -->
+        <script src="/bower_components/angular-resource/angular-resource.js"></script>
+        <script src="/bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="/bower_components/angular-sanitize/angular-sanitize.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="/scripts/app.js"></script>
+
+        <script src="/scripts/controllers/main.js"></script>
+        <script src="/scripts/controllers/timeline.js"></script>
+        <script src="/scripts/controllers/timeline_menu.js"></script>
+        <script src="/scripts/controllers/report.js"></script>
+        <script src="/scripts/controllers/setting.js"></script>
+        <script src="/scripts/controllers/calendar.js"></script>
+
+        <script src="/scripts/services/CommunityService.js"></script>
+        <script src="/scripts/services/ItemService.js"></script>
+
+        <script src="/scripts/filters/from_now_text.js"></script>
+        <script src="/scripts/filters/money_text.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

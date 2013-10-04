@@ -1,0 +1,71 @@
+html, body {
+  padding:0;
+  margin:0;
+  color:#333;
+  background-color:#353D40;
+  font-family:"Apple SD Gothic Neo", "Nanum Gothic", "나눔고딕", "Malgun Gothic", "맑은고딕", "Dotum", "돋움", "Gulim", "굴림", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+form {
+  margin:0;
+  padding:0;
+}
+
+a {
+  color: #009FDA;
+  text-decoration: none;
+  cursor:pointer;
+}
+
+a:hover {
+  color: #00BAFF;
+}
+
+.main.menu {
+  top: 0px;
+  min-width: 320px;
+  z-index: 900;
+  box-sizing: border-box;
+  transition: margin 0.3s ease;
+}
+
+.contents {
+}
+
+.copyright {
+  text-align:center;
+  padding:15px;
+}
+
+.copyright .ui.label {
+  font-size:10px;
+}
+
+.main-content {
+  margin-left:200px;
+  background-color:#EBEAE8;
+  padding:50px 10px;
+  min-height:640px;
+}
+
+.launch.item {
+  width:200px;
+}
+
+.sidemenu {
+  float:left;
+  width:200px;
+  color:#EFEFEF;
+  padding:52px 10px 10px;
+  box-sizing: border-box;
+}
+
+.sidemenu.ui.vertical.menu {
+  width:200px;
+}
+
+.top-money-info .number {
+  text-align:center;
+  padding-top:20px;
+  font-size:1.5rem;
+}

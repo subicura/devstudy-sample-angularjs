@@ -1,0 +1,132 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" type="text/css" class="ui" href="bower_components/semantic-ui/build/minified/elements/icon.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="bower_components/semantic-ui/build/minified/elements/button.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="bower_components/semantic-ui/build/minified/elements/divider.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="bower_components/semantic-ui/build/minified/elements/header.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="bower_components/semantic-ui/build/minified/elements/image.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="bower_components/semantic-ui/build/minified/elements/input.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="bower_components/semantic-ui/build/minified/elements/label.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="bower_components/semantic-ui/build/minified/elements/loader.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="bower_components/semantic-ui/build/minified/elements/progress.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="bower_components/semantic-ui/build/minified/elements/segment.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="bower_components/semantic-ui/build/minified/elements/step.min.css">
+
+    <link rel="stylesheet" type="text/css" class="ui" href="bower_components/semantic-ui/build/minified/collections/breadcrumb.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="bower_components/semantic-ui/build/minified/collections/form.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="bower_components/semantic-ui/build/minified/collections/grid.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="bower_components/semantic-ui/build/minified/collections/menu.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="bower_components/semantic-ui/build/minified/collections/message.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="bower_components/semantic-ui/build/minified/collections/table.min.css">
+
+    <link rel="stylesheet" type="text/css" class="ui" href="bower_components/semantic-ui/build/minified/views/comment.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="bower_components/semantic-ui/build/minified/views/list.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="bower_components/semantic-ui/build/minified/views/feed.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="bower_components/semantic-ui/build/minified/views/item.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="bower_components/semantic-ui/build/minified/views/statistic.min.css">
+
+    <link rel="stylesheet" type="text/css" class="ui" href="bower_components/semantic-ui/build/minified/modules/modal.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="bower_components/semantic-ui/build/minified/modules/accordion.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="bower_components/semantic-ui/build/minified/modules/dropdown.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="bower_components/semantic-ui/build/minified/modules/popup.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="bower_components/semantic-ui/build/minified/modules/reveal.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="bower_components/semantic-ui/build/minified/modules/rating.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="bower_components/semantic-ui/build/minified/modules/sidebar.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="bower_components/semantic-ui/build/minified/modules/shape.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="bower_components/semantic-ui/build/minified/modules/tab.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="bower_components/semantic-ui/build/minified/modules/checkbox.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="bower_components/semantic-ui/build/minified/modules/dimmer.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="bower_components/semantic-ui/build/minified/modules/transition.min.css">
+
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+  <body ng-app="moneyApp">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script src="bower_components/es5-shim/es5-shim.js"></script>
+      <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div class="wrapper">
+      <div class="signup">
+        <a>
+          Sign up
+        </a>
+      </div>
+      <div class="introduction">
+        <h1 class="ui header">
+          MoneyBook <div class="ui red label">beta</div>
+        </h1>
+      </div>
+
+      <div class="login-wrapper">
+        <a class="fluid ui facebook button" href="/app">
+          <i class="facebook icon"></i>
+          Log-in with Facebook
+        </a>
+        <a class="fluid ui twitter button" href="/app">
+          <i class="twitter icon"></i>
+          Sign-up with Twitter
+        </a>
+        <div class="ui inverted horizontal divider">
+          Or
+        </div>
+        <form class="ui form">
+          <div class="two fields">
+            <div class="field">
+              <div class="ui left labeled icon input">
+                <input type="text" placeholder="Username">
+                <i class="user icon"></i>
+                <div class="ui corner label">
+                  <i class="icon asterisk"></i>
+                </div>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui left labeled icon input">
+                <input type="password">
+                <i class="lock icon"></i>
+                <div class="ui corner label">
+                  <i class="icon asterisk"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="fluid ui big red button">
+            Login
+          </a>
+        </form>
+      </div>
+    </div>
+
+    <script src="bower_components/jquery/jquery.js"></script>
+
+    <script src="bower_components/semantic-ui/build/minified/modules/behavior/api.min.js"></script>
+    <script src="bower_components/semantic-ui/build/minified/modules/behavior/state.min.js"></script>
+    <script src="bower_components/semantic-ui/build/minified/modules/accordion.min.js"></script>
+    <script src="bower_components/semantic-ui/build/minified/modules/checkbox.min.js"></script>
+    <script src="bower_components/semantic-ui/build/minified/modules/dimmer.min.js"></script>
+    <script src="bower_components/semantic-ui/build/minified/modules/dropdown.min.js"></script>
+    <script src="bower_components/semantic-ui/build/minified/modules/modal.min.js"></script>
+    <script src="bower_components/semantic-ui/build/minified/modules/popup.min.js"></script>
+    <script src="bower_components/semantic-ui/build/minified/modules/rating.min.js"></script>
+    <script src="bower_components/semantic-ui/build/minified/modules/sidebar.min.js"></script>
+    <script src="bower_components/semantic-ui/build/minified/modules/tab.min.js"></script>
+    <script src="bower_components/semantic-ui/build/minified/modules/transition.min.js"></script>
+</body>
+</html>
